@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- foto provisória: troque pela foto de cada integrante -->
+  <rect width="120" height="120" fill="#e0e0e0"/>
+  <circle cx="60" cy="46" r="22" fill="#9e9e9e"/>
+  <path d="M20 120 C20 88 38 76 60 76 C82 76 100 88 100 120 Z" fill="#9e9e9e"/>
+</svg>

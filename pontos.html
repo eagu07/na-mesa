@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Na Mesa - Pontos de coleta</title>
+    <link rel="icon" href="assets/icons/logo.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a href="index.html" class="logo">
+                <img src="assets/icons/logo.svg" alt="Logo do Na Mesa">
+                Na Mesa
+            </a>
+            <button class="botao-menu" id="botao-menu" aria-label="Abrir menu">☰</button>
+            <nav class="menu" id="menu">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="como-funciona.html">Como funciona</a></li>
+                    <li><a href="pontos.html" class="ativo">Pontos de coleta</a></li>
+                    <li><a href="simulador.html">Simulador</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="integrantes.html">Integrantes</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Pontos de coleta</h1>
+        <p>Os pontos de coleta recebem as doações dos comerciantes e entregam para as famílias. Escolha um bairro ou procure pelo nome.</p>
+
+        <div class="filtros">
+            <div class="filtro">
+                <label for="filtro-bairro">Bairro</label>
+                <select id="filtro-bairro">
+                    <option value="todos">Todos</option>
+                    <option value="Itaquera">Itaquera</option>
+                    <option value="Guaianases">Guaianases</option>
+                    <option value="São Mateus">São Mateus</option>
+                </select>
+            </div>
+            <div class="filtro">
+                <label for="busca">Buscar pelo nome</label>
+                <input type="text" id="busca" placeholder="Ex.: igreja, escola">
+            </div>
+        </div>
+
+        <p id="resultado">6 ponto(s) encontrado(s)</p>
+
+        <div class="cards">
+            <article class="card ponto"
+                data-bairro="Itaquera"
+                data-endereco="Rua das Palmeiras, 120"
+                data-horario="Segunda a sexta, das 9h às 17h"
+                data-responsavel="Dona Cida"
+                data-capacidade="300"
+                data-ocupado="180">
+                <h3>Associação de Moradores Vila Progresso</h3>
+                <p class="bairro">Itaquera</p>
+                <p>Segunda a sexta, das 9h às 17h</p>
+                <p>Ocupação: <span class="porcentagem"></span></p>
+                <meter min="0"></meter>
+                <button class="botao botao-detalhes">Ver detalhes</button>
+            </article>
+
+            <article class="card ponto"
+                data-bairro="Itaquera"
+                data-endereco="Avenida Principal, 845"
+                data-horario="Terça e quinta, das 14h às 19h"
+                data-responsavel="Padre Marcos"
+                data-capacidade="200"
+                data-ocupado="40">
+                <h3>Paróquia São Francisco</h3>
+                <p class="bairro">Itaquera</p>
+                <p>Terça e quinta, das 14h às 19h</p>
+                <p>Ocupação: <span class="porcentagem"></span></p>
+                <meter min="0"></meter>
+                <button class="botao botao-detalhes">Ver detalhes</button>
+            </article>
+
+            <article class="card ponto"
+                data-bairro="Guaianases"
+                data-endereco="Rua da Escola, 33"
+                data-horario="Sábado, das 8h às 12h"
+                data-responsavel="Professora Juliana"
+                data-capacidade="150"
+                data-ocupado="120">
+                <h3>Escola Estadual Vila Nova</h3>
+                <p class="bairro">Guaianases</p>
+                <p>Sábado, das 8h às 12h</p>
+                <p>Ocupação: <span class="porcentagem"></span></p>
+                <meter min="0"></meter>
+                <button class="botao botao-detalhes">Ver detalhes</button>
+            </article>
+
+            <article class="card ponto"
+                data-bairro="Guaianases"
+                data-endereco="Rua Esperança, 501"
+                data-horario="Segunda a sábado, das 10h às 18h"
+                data-responsavel="Carlos"
+                data-capacidade="500"
+                data-ocupado="210">
+                <h3>ONG Mãos que Alimentam</h3>
+                <p class="bairro">Guaianases</p>
+                <p>Segunda a sábado, das 10h às 18h</p>
+                <p>Ocupação: <span class="porcentagem"></span></p>
+                <meter min="0"></meter>
+                <button class="botao botao-detalhes">Ver detalhes</button>
+            </article>
+
+            <article class="card ponto"
+                data-bairro="São Mateus"
+                data-endereco="Praça Central, 10"
+                data-horario="Quarta e sexta, das 13h às 18h"
+                data-responsavel="Rosana"
+                data-capacidade="250"
+                data-ocupado="95">
+                <h3>Centro Comunitário São Mateus</h3>
+                <p class="bairro">São Mateus</p>
+                <p>Quarta e sexta, das 13h às 18h</p>
+                <p>Ocupação: <span class="porcentagem"></span></p>
+                <meter min="0"></meter>
+                <button class="botao botao-detalhes">Ver detalhes</button>
+            </article>
+
+            <article class="card ponto"
+                data-bairro="São Mateus"
+                data-endereco="Rua do Sol, 78"
+                data-horario="Domingo, das 9h às 12h"
+                data-responsavel="Pastor André"
+                data-capacidade="180"
+                data-ocupado="150">
+                <h3>Igreja Batista Esperança</h3>
+                <p class="bairro">São Mateus</p>
+                <p>Domingo, das 9h às 12h</p>
+                <p>Ocupação: <span class="porcentagem"></span></p>
+                <meter min="0"></meter>
+                <button class="botao botao-detalhes">Ver detalhes</button>
+            </article>
+        </div>
+
+        <p class="aviso">Os pontos desta página são fictícios e foram criados para o protótipo.</p>
+
+        <!-- janela que aparece ao clicar em "Ver detalhes" -->
+        <div class="modal" id="modal">
+            <div class="modal-caixa">
+                <button class="modal-fechar" id="modal-fechar" aria-label="Fechar detalhes">X</button>
+                <h2 id="modal-nome"></h2>
+                <p><strong>Bairro:</strong> <span id="modal-bairro"></span></p>
+                <p><strong>Endereço:</strong> <span id="modal-endereco"></span></p>
+                <p><strong>Horário:</strong> <span id="modal-horario"></span></p>
+                <p><strong>Responsável:</strong> <span id="modal-responsavel"></span></p>
+                <p><strong>Capacidade:</strong> <span id="modal-capacidade"></span></p>
+                <p><strong>Ocupado:</strong> <span id="modal-ocupado"></span></p>
+                <p><strong>Espaço livre:</strong> <span id="modal-livre"></span></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <p>Na Mesa - Global Solution 2026/2 - FIAP</p>
+        <p>Turma 1TDSPS</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

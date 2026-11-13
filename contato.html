@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Na Mesa - Contato</title>
+    <link rel="icon" href="assets/icons/logo.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a href="index.html" class="logo">
+                <img src="assets/icons/logo.svg" alt="Logo do Na Mesa">
+                Na Mesa
+            </a>
+            <button class="botao-menu" id="botao-menu" aria-label="Abrir menu">☰</button>
+            <nav class="menu" id="menu">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="como-funciona.html">Como funciona</a></li>
+                    <li><a href="pontos.html">Pontos de coleta</a></li>
+                    <li><a href="simulador.html">Simulador</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="integrantes.html">Integrantes</a></li>
+                    <li><a href="contato.html" class="ativo">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Contato</h1>
+        <p>Quer doar, ser um ponto de coleta ou tirar uma dúvida? Mande uma mensagem para a nossa equipe.</p>
+
+        <form id="form-contato" class="formulario" novalidate>
+            <div class="campo">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome">
+                <span class="erro" id="erro-nome"></span>
+            </div>
+
+            <div class="campo">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email">
+                <span class="erro" id="erro-email"></span>
+            </div>
+
+            <div class="campo">
+                <label for="assunto">Assunto</label>
+                <select id="assunto" name="assunto">
+                    <option value="">Selecione</option>
+                    <option value="doar">Quero doar alimentos</option>
+                    <option value="ponto">Quero ser um ponto de coleta</option>
+                    <option value="duvida">Tenho uma dúvida</option>
+                </select>
+                <span class="erro" id="erro-assunto"></span>
+            </div>
+
+            <div class="campo">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem"></textarea>
+                <span class="erro" id="erro-mensagem"></span>
+            </div>
+
+            <button type="submit" class="botao">Enviar</button>
+            <p class="sucesso" id="mensagem-sucesso"></p>
+        </form>
+
+        <section class="card outras-formas">
+            <h2>Outras formas de contato</h2>
+            <!-- TROCAR: coloque o e-mail real da equipe -->
+            <p>E-mail: contato@namesa.com.br</p>
+            <p>São Paulo - SP</p>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>Na Mesa - Global Solution 2026/2 - FIAP</p>
+        <p>Turma 1TDSPS</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

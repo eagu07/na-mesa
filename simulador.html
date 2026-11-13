@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Na Mesa - Simulador</title>
+    <link rel="icon" href="assets/icons/logo.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a href="index.html" class="logo">
+                <img src="assets/icons/logo.svg" alt="Logo do Na Mesa">
+                Na Mesa
+            </a>
+            <button class="botao-menu" id="botao-menu" aria-label="Abrir menu">☰</button>
+            <nav class="menu" id="menu">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="como-funciona.html">Como funciona</a></li>
+                    <li><a href="pontos.html">Pontos de coleta</a></li>
+                    <li><a href="simulador.html" class="ativo">Simulador</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="integrantes.html">Integrantes</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Simulador de prioridade</h1>
+        <p>Veja como o Na Mesa decide a ordem dos convites. Mude os dados da família e a nota é calculada na hora.</p>
+
+        <div class="simulador">
+            <form id="form-simulador" class="formulario">
+                <h2>Dados da família</h2>
+
+                <div class="campo">
+                    <label for="sim-renda">Faixa de renda no CadÚnico</label>
+                    <select id="sim-renda">
+                        <option value="1">Extrema pobreza</option>
+                        <option value="2">Pobreza</option>
+                        <option value="3">Baixa renda</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="sim-pessoas">Pessoas na casa</label>
+                    <input type="number" id="sim-pessoas" min="1" value="4">
+                </div>
+
+                <div class="campo">
+                    <label for="sim-criancas">Crianças</label>
+                    <input type="number" id="sim-criancas" min="0" value="2">
+                </div>
+
+                <div class="campo">
+                    <label for="sim-idosos">Idosos</label>
+                    <input type="number" id="sim-idosos" min="0" value="0">
+                </div>
+
+                <div class="campo">
+                    <label for="sim-dias">Dias sem receber doação</label>
+                    <input type="number" id="sim-dias" min="0" value="10">
+                </div>
+
+                <div class="campo">
+                    <label for="sim-convites">Convites recebidos</label>
+                    <input type="number" id="sim-convites" min="0" value="0">
+                </div>
+
+                <div class="campo">
+                    <label for="sim-retiradas">Retiradas feitas</label>
+                    <input type="number" id="sim-retiradas" min="0" value="0">
+                </div>
+
+                <p class="erro" id="sim-erro"></p>
+                <button type="button" class="botao botao-secundario" id="botao-limpar">Limpar</button>
+            </form>
+
+            <div class="card resultado">
+                <h2>Resultado</h2>
+                <p>Nota de prioridade:</p>
+                <p class="nota" id="nota">0</p>
+                <p class="nivel" id="nivel"></p>
+                <meter id="barra-nota" min="0" max="100" value="0"></meter>
+                <ul class="lista-resultado">
+                    <li>Faixa de renda: <strong id="parte-renda">0</strong> de 40</li>
+                    <li>Tamanho da família: <strong id="parte-tamanho">0</strong> de 25</li>
+                    <li>Tempo sem receber: <strong id="parte-dias">0</strong> de 25</li>
+                    <li>Comparecimento: <strong id="parte-comparecimento">0</strong> de 10</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="dica">Os critérios e os pesos estão explicados na página <a href="como-funciona.html">Como funciona</a>.</p>
+    </main>
+
+    <footer class="rodape">
+        <p>Na Mesa - Global Solution 2026/2 - FIAP</p>
+        <p>Turma 1TDSPS</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

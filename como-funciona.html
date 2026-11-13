@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Na Mesa - Como funciona</title>
+    <link rel="icon" href="assets/icons/logo.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a href="index.html" class="logo">
+                <img src="assets/icons/logo.svg" alt="Logo do Na Mesa">
+                Na Mesa
+            </a>
+            <button class="botao-menu" id="botao-menu" aria-label="Abrir menu">☰</button>
+            <nav class="menu" id="menu">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="como-funciona.html" class="ativo">Como funciona</a></li>
+                    <li><a href="pontos.html">Pontos de coleta</a></li>
+                    <li><a href="simulador.html">Simulador</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="integrantes.html">Integrantes</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Como funciona</h1>
+
+        <section>
+            <h2>Passo a passo</h2>
+            <ol class="lista">
+                <li><strong>O comerciante registra:</strong> o mercado ou a padaria cadastra o alimento que está perto de vencer.</li>
+                <li><strong>O ponto de coleta recebe:</strong> o alimento é levado ao ponto de coleta do bairro, que confere se ele ainda está bom.</li>
+                <li><strong>O sistema convida as famílias:</strong> as famílias indicadas pelo CRAS são convidadas por ordem de prioridade.</li>
+                <li><strong>A família retira:</strong> a família vai até o ponto de coleta e busca a doação.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Para quem é</h2>
+            <div class="abas">
+                <button class="botao-aba ativa" data-aba="comerciante">Comerciante</button>
+                <button class="botao-aba" data-aba="familia">Família</button>
+                <button class="botao-aba" data-aba="ponto">Ponto de coleta</button>
+            </div>
+
+            <div class="painel card visivel" id="comerciante">
+                <h3>Sou comerciante</h3>
+                <p>Você cadastra os alimentos que iam ser descartados e leva até o ponto de coleta mais próximo. Assim, sua loja diminui o desperdício e ajuda o bairro.</p>
+            </div>
+
+            <div class="painel card" id="familia">
+                <h3>Sou de uma família</h3>
+                <p>Se a sua família está no CadÚnico, procure o CRAS do seu bairro. Depois da indicação, você recebe um convite pelo Telegram com o local e o horário para retirar a doação.</p>
+            </div>
+
+            <div class="painel card" id="ponto">
+                <h3>Sou um ponto de coleta</h3>
+                <p>Igrejas, escolas, associações e ONGs podem ser pontos de coleta. O ponto recebe as doações, confere os alimentos e entrega para as famílias convidadas.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Quem recebe primeiro</h2>
+            <p>Cada família recebe uma nota de 0 a 100. Quanto maior a nota, antes a família é convidada.</p>
+            <div class="tabela-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Critério</th>
+                            <th>Pontos</th>
+                            <th>Como conta</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Faixa de renda do CadÚnico</td>
+                            <td>até 40</td>
+                            <td>Extrema pobreza: 40, pobreza: 24, baixa renda: 12</td>
+                        </tr>
+                        <tr>
+                            <td>Tamanho da família</td>
+                            <td>até 25</td>
+                            <td>Mais pessoas na casa dão mais pontos, com peso extra para crianças e idosos</td>
+                        </tr>
+                        <tr>
+                            <td>Tempo sem receber</td>
+                            <td>até 25</td>
+                            <td>Quanto mais dias sem receber doação, maior a nota (até 30 dias)</td>
+                        </tr>
+                        <tr>
+                            <td>Comparecimento</td>
+                            <td>até 10</td>
+                            <td>Famílias que buscam a doação quando são convidadas ganham mais pontos</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="dica">Quer ver na prática? Use o <a href="simulador.html">simulador de prioridade</a>.</p>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>Na Mesa - Global Solution 2026/2 - FIAP</p>
+        <p>Turma 1TDSPS</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

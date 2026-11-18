@@ -58,4 +58,4 @@ na-mesa/
 
 ## Contato
 
-Pela página `contato.html` do site, ou pelo GitHub e LinkedIn de qualquer integrante (tabela acima).
+Pela página `contato.html` do site ou pelo GitHub e LinkedIn de qualquer integrante (tabela acima).

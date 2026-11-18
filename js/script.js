@@ -14,6 +14,8 @@ if (botaoMenu) {
     botaoMenu.addEventListener("click", function () {
         // toggle coloca a classe se ela não existe e tira se já existe
         menu.classList.toggle("aberto");
+        // avisa o leitor de tela se o menu está aberto ou fechado
+        botaoMenu.setAttribute("aria-expanded", menu.classList.contains("aberto"));
     });
 }
 
@@ -171,12 +173,14 @@ const formulario = document.getElementById("form-contato");
 // mostra a mensagem de erro embaixo do campo e deixa a borda vermelha
 function mostrarErro(campo, mensagem) {
     campo.classList.add("campo-erro");
+    campo.classList.remove("campo-ok");
     document.getElementById("erro-" + campo.id).textContent = mensagem;
 }
 
-// tira a mensagem de erro e a borda vermelha
+// tira a mensagem de erro e a borda vermelha, e deixa a borda verde (campo certo)
 function limparErro(campo) {
     campo.classList.remove("campo-erro");
+    campo.classList.add("campo-ok");
     document.getElementById("erro-" + campo.id).textContent = "";
 }
 
@@ -186,6 +190,14 @@ function emailValido(email) {
     const posicaoPonto = email.lastIndexOf(".");
 
     if (posicaoArroba < 1) {
+        return false;
+    }
+    // não pode ter espaço
+    if (email.indexOf(" ") !== -1) {
+        return false;
+    }
+    // só pode ter um @
+    if (posicaoArroba !== email.lastIndexOf("@")) {
         return false;
     }
     if (posicaoPonto < posicaoArroba + 2) {
@@ -247,6 +259,11 @@ if (formulario) {
             sucesso.textContent = "Mensagem enviada com sucesso! Obrigado, " + nome.value.trim() + ".";
             sucesso.classList.add("mostrar");
             formulario.reset();
+            // depois de enviar, os campos voltam ao visual normal
+            nome.classList.remove("campo-ok");
+            email.classList.remove("campo-ok");
+            assunto.classList.remove("campo-ok");
+            mensagem.classList.remove("campo-ok");
         }
     });
 }
